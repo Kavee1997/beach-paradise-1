@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="708.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.MenuController">
+   <children>
+      <ImageView fitHeight="708.0" fitWidth="932.0">
+         <image>
+            <Image url="@Reservation.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnRestaurant" layoutX="68.0" layoutY="188.0" mnemonicParsing="false" onAction="#restaurant" prefHeight="73.0" prefWidth="237.0" text="Restaurant">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnStaffDetails" layoutX="73.0" layoutY="525.0" mnemonicParsing="false" onAction="#staff" prefHeight="73.0" prefWidth="237.0" text="Staff Details">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReservation" layoutX="73.0" layoutY="295.0" mnemonicParsing="false" onAction="#reservation" prefHeight="73.0" prefWidth="237.0" text="Reservation">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAddRoom" layoutX="73.0" layoutY="415.0" mnemonicParsing="false" onAction="#room" prefHeight="73.0" prefWidth="237.0" text="Add Room">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLogout" layoutX="674.0" layoutY="27.0" mnemonicParsing="false" onAction="#userLogout" prefHeight="73.0" prefWidth="237.0" text="LOGOUT" />
+      <Label layoutX="83.0" layoutY="37.0" prefHeight="46.0" prefWidth="216.0" text="Home">
+         <font>
+            <Font name="Times New Roman" size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

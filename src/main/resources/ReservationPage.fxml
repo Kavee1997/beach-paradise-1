@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="874.0" prefWidth="1343.0" style="-fx-background-color: #2375b8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ReservationController">
+    <children>
+        <Label layoutX="553.0" layoutY="28.0" prefHeight="79.0" prefWidth="260.0" text="Reservation">
+            <font>
+                <Font name="Cortoba" size="45.0" />
+            </font>
+        </Label>
+        <Label layoutX="904.0" layoutY="107.0" prefHeight="25.0" prefWidth="63.0" text="Name">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tableView" layoutX="485.0" layoutY="165.0" prefHeight="548.0" prefWidth="826.0">
+            <columns>
+                <TableColumn fx:id="customerReservationIDColumn" prefWidth="128.0" text="Reservation No" />
+                <TableColumn fx:id="customerNameColumn" prefWidth="72.0" text="Name" />
+            <TableColumn fx:id="customerNIC" prefWidth="128.0" text="NIC" />
+                <TableColumn fx:id="customerAddressColumn" prefWidth="87.0" text="Address" />
+                <TableColumn fx:id="customerMobileColumn" prefWidth="67.0" text="Mobile" />
+                <TableColumn fx:id="customerCheckInColumn" prefWidth="75.0" text="Check In" />
+                <TableColumn fx:id="customerCheckOutColumn" prefWidth="83.0" text="Check Out" />
+                <TableColumn fx:id="customerRoomTypeColumn" prefWidth="96.0" text="Room Type" />
+                <TableColumn fx:id="customerRoomNoColumn" minWidth="6.0" prefWidth="76.0" text="Room No" />
+                <TableColumn fx:id="customerBedTypeColumn" prefWidth="77.0" text="Bed Type" />
+                <TableColumn fx:id="customerAmountColumn" minWidth="0.0" prefWidth="64.0" text="Amount" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtSearchField" layoutX="984.0" layoutY="107.0" prefHeight="26.0" prefWidth="197.0" />
+        <Button fx:id="btnSearch" layoutX="1203.0" layoutY="107.0" mnemonicParsing="false" onAction="#searchCustomer" prefHeight="26.0" prefWidth="90.0" text="Search" />
+        <Button fx:id="btnReservation" layoutX="319.0" layoutY="806.0" mnemonicParsing="false" onAction="#roomReservation" prefHeight="26.0" prefWidth="170.0" text="Add" />
+        <Button layoutX="537.0" layoutY="804.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="170.0" text="Clear" />
+        <Button fx:id="btnDeleteReservation" layoutX="747.0" layoutY="804.0" mnemonicParsing="false" onAction="#deleteReservation" prefHeight="26.0" prefWidth="170.0" text="Delete" />
+        <Button fx:id="btnUpdateReservation" layoutX="948.0" layoutY="802.0" mnemonicParsing="false" onAction="#updateReservation" prefHeight="26.0" prefWidth="170.0" text="Update" />
+        <Button fx:id="btnHome" layoutX="1163.0" layoutY="799.0" mnemonicParsing="false" onAction="#home" prefHeight="26.0" prefWidth="170.0" text="Home" />
+        <VBox layoutX="222.0" layoutY="171.0" prefHeight="546.0" prefWidth="218.0" spacing="27.0">
+            <children>
+                <TextField fx:id="txtReservationNo" prefHeight="26.0" prefWidth="192.0" />
+                <TextField fx:id="txtCustomerName" prefHeight="26.0" prefWidth="194.0" />
+            <TextField fx:id="txtCustomerNIC" prefHeight="26.0" prefWidth="194.0" />
+            <TextField fx:id="txtCustomerAddress" prefHeight="26.0" prefWidth="194.0" />
+                <TextField fx:id="txtCustomerMobile" prefHeight="26.0" prefWidth="194.0" />
+            <DatePicker fx:id="checkIn" prefHeight="26.0" prefWidth="225.0" />
+                <DatePicker fx:id="checkOut" prefHeight="26.0" prefWidth="225.0" />
+                <ChoiceBox fx:id="roomType" prefHeight="26.0" prefWidth="220.0" value="">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="A/C Room" />
+                            <String fx:value="Non A/C Room" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <TextField fx:id="txtRoomNo" prefHeight="26.0" prefWidth="194.0" />
+            <ChoiceBox fx:id="bedType" prefHeight="26.0" prefWidth="220.0" value="">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Single Bed" />
+                        <String fx:value="Double Bed" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <TextField fx:id="txtAmount" prefHeight="26.0" prefWidth="194.0" />
+            </children>
+        </VBox>
+        <VBox layoutX="68.0" layoutY="172.0" prefHeight="546.0" prefWidth="148.0" spacing="37.0">
+            <children>
+                <Label style="-fx-font-weight: bold;" text="Reservation No" />
+                <Label prefHeight="16.0" prefWidth="124.0" style="-fx-font-weight: bold;" text="Customer name" />
+            <Label prefHeight="16.0" prefWidth="63.0" style="-fx-font-weight: bold;" text="NIC" />
+                <Label prefHeight="16.0" prefWidth="63.0" style="-fx-font-weight: bold;" text="Address" />
+                <Label style="-fx-font-weight: bold;" text="Mobile" />
+                <Label style="-fx-font-weight: bold;" text="Check In" />
+                <Label style="-fx-font-weight: bold;" text="Check Out" />
+                <Label style="-fx-font-weight: bold;" text="Room Type" />
+                <Label prefHeight="16.0" prefWidth="90.0" style="-fx-font-weight: bold;" text="Room No" />
+                <Label style="-fx-font-weight: bold;" text="Bed Type" />
+                <Label style="-fx-font-weight: bold;" text="Amount" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

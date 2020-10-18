@@ -40,7 +40,18 @@ dependencies {
 
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java'
+        }
+        resources {
+            srcDirs 'src/main/resources'
+        }
+    }
+}
+
 application {
     // Define the main class for the application.
-    mainClassName = 'com.controller.StaffDetails'
+    mainClassName = 'com.controller.Hotel'
 }

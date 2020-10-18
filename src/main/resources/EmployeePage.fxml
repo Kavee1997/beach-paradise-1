@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="874.0" prefWidth="1343.0" style="-fx-background-color: #2375b8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.EmployeeController">
+   <children>
+      <Label layoutX="562.0" layoutY="24.0" prefHeight="66.0" prefWidth="253.0" text="Staff Details">
+         <font>
+            <Font name="Cortoba" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="904.0" layoutY="107.0" prefHeight="25.0" prefWidth="63.0" text="Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TableView layoutX="485.0" layoutY="165.0" prefHeight="548.0" prefWidth="826.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Emp No" />
+          <TableColumn prefWidth="75.0" text="Name" />
+            <TableColumn prefWidth="75.0" text="Gender" />
+            <TableColumn prefWidth="75.0" text="DoB" />
+            <TableColumn prefWidth="75.0" text="Age" />
+            <TableColumn prefWidth="75.0" text="NIC" />
+            <TableColumn prefWidth="75.0" text="Address" />
+            <TableColumn prefWidth="75.0" text="Mobile" />
+            <TableColumn prefWidth="75.0" text="Salary" />
+            <TableColumn prefWidth="75.0" text="Date Hired" />
+            <TableColumn prefWidth="75.0" text="Job tit." />
+        </columns>
+      </TableView>
+      <TextField layoutX="984.0" layoutY="107.0" prefHeight="26.0" prefWidth="197.0" />
+      <Button layoutX="1203.0" layoutY="107.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" text="Search" />
+      <Button layoutX="319.0" layoutY="806.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="170.0" text="Add" />
+      <Button layoutX="537.0" layoutY="804.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="170.0" text="Clear" />
+      <Button layoutX="747.0" layoutY="804.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="170.0" text="Delete" />
+      <Button layoutX="948.0" layoutY="802.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="170.0" text="Update" />
+      <Button fx:id="btnHome" layoutX="1163.0" layoutY="799.0" mnemonicParsing="false" onAction="#home" prefHeight="26.0" prefWidth="170.0" text="Home" />
+      <VBox layoutX="221.0" layoutY="178.0" prefHeight="513.0" prefWidth="218.0" spacing="25.0">
+         <children>
+            <TextField prefHeight="26.0" prefWidth="192.0" />
+            <TextField prefHeight="26.0" prefWidth="194.0" />
+            <ChoiceBox prefHeight="26.0" prefWidth="217.0" />
+            <DatePicker prefHeight="26.0" prefWidth="221.0" />
+            <TextField prefHeight="26.0" prefWidth="194.0" />
+            <TextField prefHeight="26.0" prefWidth="194.0" />
+            <TextField prefHeight="26.0" prefWidth="194.0" />
+            <TextField prefHeight="26.0" prefWidth="194.0" />
+            <TextField prefHeight="26.0" prefWidth="194.0" />
+            <DatePicker prefHeight="26.0" prefWidth="225.0" />
+            <ChoiceBox prefHeight="26.0" prefWidth="222.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="68.0" layoutY="172.0" prefHeight="546.0" prefWidth="148.0" spacing="37.0">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Employee No" />
+            <Label style="-fx-font-weight: bold;" text="Employee name" />
+            <Label prefHeight="16.0" prefWidth="63.0" style="-fx-font-weight: bold;" text="Gender" />
+            <Label style="-fx-font-weight: bold;" text="Date of Birth" />
+            <Label style="-fx-font-weight: bold;" text="Age" />
+            <Label style="-fx-font-weight: bold;" text="NIC" />
+            <Label style="-fx-font-weight: bold;" text="Address" />
+            <Label prefHeight="16.0" prefWidth="63.0" style="-fx-font-weight: bold;" text="Mobile" />
+            <Label style="-fx-font-weight: bold;" text="Salary" />
+            <Label style="-fx-font-weight: bold;" text="Date Hired" />
+            <Label style="-fx-font-weight: bold;" text="Job Title" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
